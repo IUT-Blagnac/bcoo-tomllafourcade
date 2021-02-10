@@ -1,0 +1,35 @@
+@startuml
+class TO {
+  String nom
+  String adresse
+}
+class Voyage {
+  String libellé
+  String lieu de départ
+String lieu de destination
+departureTime : Date de départ
+arrivalTime : Date d'arrivée
+String prix de base
+String options
+}
+TO "0..1" -- "1..*"Voyage
+class Client {
+  String nom 
+String prénom
+String adresse
+}
+class Commande {
+  numéro 
+date 
+état
+}
+class Voyageur {
+String nom 
+String prénom
+String sexe
+Date de naissance
+}
+Client "0..*"--"0..*"Commande
+Voyageur "1..*" -- "0..1" Commande
+Commande"0..*" -- "0..1"Voyage
+@enduml
