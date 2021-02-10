@@ -16,8 +16,8 @@ coefficient
 class Note{
 valeur
 }
-étudiant "0..*" -- "1..*" cours
-examen "0..1" -- "1..*" cours
+étudiant "1..*" -- "0..*" cours
+examen -- "1" cours
 étudiant "0..*" -- "1..*" examen
 (étudiant, examen) . Note
 class Enseignant {
